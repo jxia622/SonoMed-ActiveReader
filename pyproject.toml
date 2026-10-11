@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "sonomed-active-reader"
-version = "0.1.0"
+version = "0.1.1"
 description = "History-conditioned ultrasound evidence selection with Qwen and GRPO"
 readme = "README.md"
 requires-python = ">=3.11,<3.14"
@@ -22,6 +22,7 @@ dependencies = [
   "safetensors>=0.4.5,<1",
   "tensorboard>=2.18,<3",
   "torch>=2.5,<3",
+  "torchvision>=0.20,<1",
   "transformers>=5.14.1,<6",
   "requests>=2.32,<3",
 ]
