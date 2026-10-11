@@ -1,0 +1,13 @@
+{
+  "description": "SHA-256 of private source summaries used for this aggregate export; source records are not redistributed.",
+  "files": {
+    "development_results.json": "738f04275e7a2edcff74697d9a35a684e6c7fb93e3ac1382e9bae0c450c9cff8",
+    "suitability_summary.json": "afbd1005121d0f38c1d662025e1b7c7121621662e49e9137671570f41b279f34",
+    "v2b_full_report.json": "a376d62f7bc5f4fd7cc84ec9977f1597f22ed1cf844cea9dbe9f1570ece66f10",
+    "v2b_full_audit.json": "636e36b5e45a270f33fae0e25de44f60a3da701759cb802020fe5f4b5eb13a46",
+    "v2b_current_report.json": "35b22aa6bf9f2b65128f1a5f1155a5b7cda446b02991618dfb183f28110adbf6",
+    "v2b_current_audit.json": "060712335941d6c85baf4d50ce6c6559f80e98261120edc8bbf39ff5b811a597",
+    "v2b_geometry_report.json": "f6425cea54275752cfb8587bb64dad93608a2fde770ff702dda1900bd59c3676",
+    "v2b_geometry_audit.json": "50ed7c1d64a26f8310fefada82d35f7efb8c3f000d28ed08245cb6cb2cf20f0b"
+  }
+}

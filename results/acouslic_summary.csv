@@ -1,0 +1,13 @@
+campaign,method,before_rl,after_rl,updates,tune_subjects,budget
+v1,full,0.225,0.35,32,8,12
+v1,current,0.225,0.225,32,8,12
+v1,geometry,0.225,0.2875,32,8,12
+v2b,full,0.2625,0.2625,64,8,12
+v2b,current,0.225,0.325,64,8,12
+v2b,geometry,0.225,0.2625,64,8,12
+shared_reference,uniform,,0.45,0,8,12
+shared_reference,geometry_prior,,0.425,0,8,12
+shared_reference,coverage,,0.35,0,8,12
+shared_reference,random_actions,,0.28300000000000003,0,8,12
+shared_reference,random,,0.23925,0,8,12
+shared_reference,privileged,,1.0,0,8,12

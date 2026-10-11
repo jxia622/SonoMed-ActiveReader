@@ -1,0 +1,39 @@
+# Copy to navigation.local.yaml and supply locally approved assets.
+# Historical results used an ultrasound adapter that is not released here.
+seed: 42
+data:
+  root: ${BREASTVID_ROOT:-data/breastvid/miccai_buv}
+  annotation_files:
+    - imagenet_vid_train_15frames.json
+    - imagenet_vid_val.json
+  manifest: artifacts/active_reader/manifest.jsonl
+  audit: artifacts/active_reader/data_audit.json
+  splits: artifacts/active_reader/splits.json
+  sft_manifests: []
+model:
+  checkpoint_kind: base_adapter
+  base: ${ULTRASOUND_QWEN_BASE:-checkpoints/qwen3-vl-4b-instruct}
+  adapter: ${ULTRASOUND_QWEN_ADAPTER:-checkpoints/ultrasound-adapter}
+  processor: ${ULTRASOUND_QWEN_PROCESSOR:-checkpoints/ultrasound-adapter}
+  revision: ebb281ec70b05090aa6165b016eac8ec08e71b17
+  dtype: bfloat16
+  image_max_pixels: 1048576
+  max_new_tokens: 128
+environment:
+  max_unique_frames: 12
+  max_decision_turns: 4
+  initial_images: 4
+reward:
+  relevance_weight: 0.0
+training:
+  group_size: 4
+  steps: 32
+navigation:
+  selector_dtype: float32
+  max_behavior_logprob_drift: 0.001
+evaluation:
+  budgets: [8, 12]
+  seeds: [7]
+  methods: [uniform, random, prompted]
+  bootstrap_samples: 1000
+output: artifacts/active_reader/runs

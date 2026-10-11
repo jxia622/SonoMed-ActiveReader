@@ -1,0 +1,274 @@
+{
+  "breastvid_test_opened": false,
+  "contrasts": [
+    {
+      "arm": "rl_full",
+      "comparator": "coverage",
+      "difference": 0.0,
+      "paired_percentile_95": [
+        -0.1875,
+        0.1875
+      ],
+      "simultaneous_basic_95": [
+        -0.425,
+        0.425
+      ]
+    },
+    {
+      "arm": "rl_full",
+      "comparator": "geometry_prior",
+      "difference": -0.075,
+      "paired_percentile_95": [
+        -0.3875,
+        0.175
+      ],
+      "simultaneous_basic_95": [
+        -0.5,
+        0.35
+      ]
+    },
+    {
+      "arm": "rl_full",
+      "comparator": "pre_rl_current",
+      "difference": 0.125,
+      "paired_percentile_95": [
+        0.0,
+        0.3125
+      ],
+      "simultaneous_basic_95": [
+        -0.3,
+        0.55
+      ]
+    },
+    {
+      "arm": "rl_full",
+      "comparator": "pre_rl_full",
+      "difference": 0.125,
+      "paired_percentile_95": [
+        0.0,
+        0.3125
+      ],
+      "simultaneous_basic_95": [
+        -0.3,
+        0.55
+      ]
+    },
+    {
+      "arm": "rl_full",
+      "comparator": "pre_rl_geometry",
+      "difference": 0.125,
+      "paired_percentile_95": [
+        0.0,
+        0.3125
+      ],
+      "simultaneous_basic_95": [
+        -0.3,
+        0.55
+      ]
+    },
+    {
+      "arm": "rl_full",
+      "comparator": "random",
+      "difference": 0.11075,
+      "paired_percentile_95": [
+        -0.08249999999999999,
+        0.30225624999999995
+      ],
+      "simultaneous_basic_95": [
+        -0.31425,
+        0.53575
+      ]
+    },
+    {
+      "arm": "rl_full",
+      "comparator": "random_actions",
+      "difference": 0.067,
+      "paired_percentile_95": [
+        -0.1525,
+        0.26725
+      ],
+      "simultaneous_basic_95": [
+        -0.358,
+        0.492
+      ]
+    },
+    {
+      "arm": "rl_full",
+      "comparator": "rl_current",
+      "difference": 0.125,
+      "paired_percentile_95": [
+        0.0,
+        0.3125
+      ],
+      "simultaneous_basic_95": [
+        -0.3,
+        0.55
+      ]
+    },
+    {
+      "arm": "rl_full",
+      "comparator": "rl_geometry",
+      "difference": 0.0625,
+      "paired_percentile_95": [
+        0.0,
+        0.1875
+      ],
+      "simultaneous_basic_95": [
+        -0.3625,
+        0.4875
+      ]
+    },
+    {
+      "arm": "rl_full",
+      "comparator": "uniform",
+      "difference": -0.09999999999999999,
+      "paired_percentile_95": [
+        -0.5375,
+        0.30000000000000004
+      ],
+      "simultaneous_basic_95": [
+        -0.525,
+        0.325
+      ]
+    }
+  ],
+  "development_gate_passed": false,
+  "heldout_opened": false,
+  "history_probe": {
+    "breastvid_test_opened": false,
+    "checkpoint_sha256": "e9c96d61ec976ce6f710ec322472b50f3fe2cdd03175ff0336e8db5b59c37b0d",
+    "data_partition_sha256": "5ace51f9a7022d6226e29c1cfa963dbee4b6af52ce91ebaba73ea79be8af21d5",
+    "full_history_mean_wfss": 0.35,
+    "heldout_opened": false,
+    "hidden_older_mean_wfss": 0.35,
+    "native_full_history_replay_identical": true,
+    "paired_subject_mean_difference": 0.0,
+    "paired_subject_percentile_95": [
+      0.0,
+      0.0
+    ],
+    "policy_unchanged": true,
+    "prompt_tokens_image_slots_latest_images_and_first_action_fixed": true,
+    "scope": "Exploratory tuning-only mechanism diagnostic, not a held-out claim",
+    "script_sha256": "ade77294836cca34650e9b7f5fa29981c100e5fe0d1b448beda772037c127420",
+    "second_action_changed": 8,
+    "status": "complete",
+    "subject_start_pairs": 16,
+    "subjects": 8
+  },
+  "methods": {
+    "coverage": {
+      "mean": 0.35,
+      "subject_bootstrap_95": [
+        0.1625,
+        0.55
+      ]
+    },
+    "geometry_prior": {
+      "mean": 0.425,
+      "subject_bootstrap_95": [
+        0.1875,
+        0.675
+      ]
+    },
+    "pre_rl_current": {
+      "mean": 0.225,
+      "subject_bootstrap_95": [
+        0.0625,
+        0.45
+      ]
+    },
+    "pre_rl_full": {
+      "mean": 0.225,
+      "subject_bootstrap_95": [
+        0.0625,
+        0.45
+      ]
+    },
+    "pre_rl_geometry": {
+      "mean": 0.225,
+      "subject_bootstrap_95": [
+        0.0625,
+        0.45
+      ]
+    },
+    "privileged": {
+      "mean": 1.0,
+      "subject_bootstrap_95": [
+        1.0,
+        1.0
+      ]
+    },
+    "random": {
+      "mean": 0.23925,
+      "subject_bootstrap_95": [
+        0.16848749999999998,
+        0.31875
+      ]
+    },
+    "random_actions": {
+      "mean": 0.28300000000000003,
+      "subject_bootstrap_95": [
+        0.1765,
+        0.392
+      ]
+    },
+    "rl_current": {
+      "mean": 0.225,
+      "subject_bootstrap_95": [
+        0.0625,
+        0.45
+      ]
+    },
+    "rl_full": {
+      "mean": 0.35,
+      "subject_bootstrap_95": [
+        0.1625,
+        0.55
+      ]
+    },
+    "rl_geometry": {
+      "mean": 0.2875,
+      "subject_bootstrap_95": [
+        0.0625,
+        0.48750000000000004
+      ]
+    },
+    "uniform": {
+      "mean": 0.45,
+      "subject_bootstrap_95": [
+        0.125,
+        0.775
+      ]
+    }
+  },
+  "scope": "Exploratory tuning results; eight subjects, not held-out confirmation",
+  "simultaneous_radius": 0.425,
+  "subjects": 8,
+  "training_signal": {
+    "current": {
+      "language_adapter_changed": true,
+      "max_behavior_logprob_drift": 2.0265579223632812e-05,
+      "positive_advantage_second_actions": 8,
+      "positive_advantage_second_actions_without_new_quality_gain": 5,
+      "reward_varying_groups": 5,
+      "updates": 32
+    },
+    "full": {
+      "language_adapter_changed": true,
+      "max_behavior_logprob_drift": 2.6226043701171875e-05,
+      "positive_advantage_second_actions": 9,
+      "positive_advantage_second_actions_without_new_quality_gain": 4,
+      "reward_varying_groups": 5,
+      "updates": 32
+    },
+    "geometry": {
+      "language_adapter_changed": true,
+      "max_behavior_logprob_drift": 2.7894973754882812e-05,
+      "positive_advantage_second_actions": 13,
+      "positive_advantage_second_actions_without_new_quality_gain": 9,
+      "reward_varying_groups": 11,
+      "updates": 32
+    }
+  }
+}

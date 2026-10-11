@@ -1,0 +1,9 @@
+# Safe defaults for synthetic software checks; no clinical/model assets resolved.
+seed: 42
+environment:
+  max_unique_frames: 12
+  max_decision_turns: 4
+  initial_images: 4
+reward:
+  relevance_weight: 0.0
+output: artifacts/demo

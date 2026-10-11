@@ -1,0 +1,53 @@
+{
+  "protocol": "acouslic-development-refinement-v2",
+  "declared_at_utc": "2026-10-11T19:38:24.384449+00:00",
+  "parent_protocol_sha256": "908ba14afb465f45b83ff1c45d24edb1e2efe4dd49a4e3f7596903bb7c0f7816",
+  "data_partition_sha256": "5ace51f9a7022d6226e29c1cfa963dbee4b6af52ce91ebaba73ea79be8af21d5",
+  "code_revision": "5c689cb57511105cea7ffe22b69eedea701f465a996bebc54deb5bf3339bca9d",
+  "warm_checkpoint_sha256": "80d1c566c3d4e490362cb7a87507d3dd1d0e3bb29049ce6bae82dce1f81853a1",
+  "source_sha256": {
+    "scripts/train_acouslic_refinement.py": "0c738b96cb5995b67407b31e4aa57b4d892b358c66c153fb116fbe426f017a12",
+    "scripts/audit_acouslic_refinement.py": "862ad89265662780f1780aa80f472df83ad102aaa2248ec39c2b2d032f0ef609",
+    "scripts/probe_acouslic_anchored_actions.py": "f35facacf1f8339029d7f4b167ec77eae0dce4685611420700c21b087be4494b",
+    "slurm/acouslic_refinement.slurm": "63388de6c7839aa4e5b371cf492381b3cdeceda9c04e13c102cac743c55ac345",
+    "configs/navigation_crc.yaml": "705d77f3c6b64431ced766f369b5c6b1dffa86a3832b10be35387cdb2eb72fb5"
+  },
+  "arms": [
+    "full",
+    "current",
+    "geometry"
+  ],
+  "updates": 64,
+  "training_seed": 20261011,
+  "learning_rate": 2e-05,
+  "clip_epsilon": 0.2,
+  "kl_weight": 0.02,
+  "max_behavior_logprob_drift": 0.001,
+  "selector_max_pixels": 196608,
+  "first_branches": 4,
+  "second_continuations_per_branch": 2,
+  "proximity_weight": 0.2,
+  "proximity_sigma_frames": 12,
+  "proximity_interpretation": "Training-only auxiliary objective from within-sweep label proximity; not an annotation of anatomy and not a policy-invariant reward claim",
+  "training_reward": "Increase in best observed WFSS plus 0.2 times increase in maximum same-sweep Gaussian label proximity",
+  "credit": "First actions compare mean final return across four branches; each pair of second actions compares only its own post-first-action gains from identical history",
+  "loss_normalization": "Equal decision-stage weights; average over branches/continuations and five action tokens",
+  "action_space": "Observed image anchor plus signed three-digit frame offset; every unseen center remains reachable in all modes",
+  "subjects": {
+    "train": 32,
+    "tune": 8,
+    "heldout_opened": 0
+  },
+  "evaluation_starts": [
+    7,
+    19
+  ],
+  "observation_budget": 12,
+  "primary_endpoint": "Unchanged original subject-mean best annotation WFSS among 12 acquired clean frames; no proximity term in evaluation",
+  "primary_model": "full at update 64",
+  "checkpoint_rule": "Final update 64, no tuning checkpoint selection",
+  "baselines": "Matched anchored pre-RL replay; original v1 full after RL reported separately; uniform, random 100 repeats, random-actions 100 repeats, coverage, train-only location prior",
+  "development_gate": "Full-history final score exceeds both its matched anchored pre-RL score and the strongest simple tuning comparator; inspect paired subject uncertainty before any held-out decision",
+  "heldout_policy": "No held-out or BreastVid test admission; v1 evaluation remains held; any later held-out plan needs all checkpoints frozen before outcomes",
+  "limitations": "Exploratory second development attempt on the same eight tuning subjects; representation, credit and reward changes are bundled, so gains do not isolate one component. A confirmed history claim needs visual controls and independent evaluation."
+}

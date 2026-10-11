@@ -1,0 +1,12 @@
+{
+  "scope": "Public source export; synthetic/software checks only",
+  "source_tests_passed": 81,
+  "source_tests_failed": 0,
+  "synthetic_acquisition_demo": "passed",
+  "synthetic_breastvid_replay": "passed",
+  "figure_regeneration": "passed",
+  "wheel_build": "passed",
+  "core_source_sha256": "5c689cb57511105cea7ffe22b69eedea701f465a996bebc54deb5bf3339bca9d",
+  "sealed_data_used": false,
+  "note": "Local verification; GitHub Actions reports its own clean-run status. No pretrained model or real-data rerun performed for publication."
+}

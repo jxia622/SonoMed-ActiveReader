@@ -1,0 +1,44 @@
+{
+  "scope": "26 development sequences only; 10 benign and 16 malignant",
+  "test_opened": false,
+  "budgets": [
+    1,
+    4,
+    8,
+    12
+  ],
+  "balanced_accuracy": {
+    "uniform": [
+      0.625,
+      0.64375,
+      0.575,
+      0.60625
+    ],
+    "random": [
+      0.5856,
+      0.6146,
+      0.6396,
+      0.6354166666666666
+    ],
+    "privileged_area": [
+      null,
+      0.64375,
+      0.70625,
+      0.6875
+    ],
+    "privileged_best": [
+      0.95,
+      0.91875,
+      0.9,
+      0.85
+    ]
+  },
+  "dense_individual": 0.5625,
+  "dense_batch": 0.59375,
+  "metric": "balanced accuracy, not acquisition WFSS",
+  "notes": [
+    "Random budget 1 is an exact expectation over individual frames; budgets 4/8/12 use three predeclared sets. Random values at budgets 1/4/8 are rounded from the source report.",
+    "Privileged methods use annotations or diagnosis labels unavailable to deployable selection policies.",
+    "Dense methods pool probabilities across separate reader calls, not full-video joint attention."
+  ]
+}

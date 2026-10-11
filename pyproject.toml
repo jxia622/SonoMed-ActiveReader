@@ -1,0 +1,61 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sonomed-active-reader"
+version = "0.1.0"
+description = "History-conditioned ultrasound evidence selection with Qwen and GRPO"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Jack Xia" }]
+dependencies = [
+  "accelerate>=1.2,<2",
+  "datasets>=3.2,<5",
+  "numpy>=1.26,<3",
+  "peft>=0.14,<1",
+  "pillow>=10.4,<13",
+  "pyarrow>=18,<22",
+  "pydantic>=2.10,<3",
+  "pyyaml>=6.0,<7",
+  "safetensors>=0.4.5,<1",
+  "tensorboard>=2.18,<3",
+  "torch>=2.5,<3",
+  "transformers>=5.14.1,<6",
+  "requests>=2.32,<3",
+]
+
+[project.optional-dependencies]
+qlora = ["bitsandbytes>=0.45,<1; platform_system == 'Linux'"]
+metrics = [
+  "bert-score>=0.3.13,<1",
+  "rouge-score>=0.1.2,<1",
+  "sacrebleu>=2.4,<3",
+]
+viz = ["matplotlib>=3.9,<4"]
+dev = [
+  "pytest>=8.3,<10",
+  "pytest-cov>=6,<8",
+  "ruff>=0.11,<1",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sonomed_vlm"]
+
+[tool.pytest.ini_options]
+addopts = "-ra"
+testpaths = ["tests"]
+markers = [
+  "gpu: requires CUDA and local model assets",
+  "integration: uses local dataset/model assets",
+]
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+extend-exclude = ["data", "artifacts", "results"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "RUF"]
+ignore = ["E501"]
