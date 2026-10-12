@@ -3,7 +3,7 @@ requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [project]
-name = "sonomed-active-reader"
+name = "ultrasound-video-agent"
 version = "0.1.1"
 description = "History-conditioned ultrasound evidence selection with Qwen and GRPO"
 readme = "README.md"

@@ -1,8 +1,8 @@
-# SonoMed ActiveReader
+# Ultrasound Video Agent
 
 **Can an ultrasound agent learn which frames to inspect—and does visual history help?**
 
-[![Tests](https://github.com/jxia622/SonoMed-ActiveReader/actions/workflows/tests.yml/badge.svg)](https://github.com/jxia622/SonoMed-ActiveReader/actions/workflows/tests.yml)
+[![Tests](https://github.com/jxia622/ultrasound-video-agent/actions/workflows/tests.yml/badge.svg)](https://github.com/jxia622/ultrasound-video-agent/actions/workflows/tests.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/code-Apache_2.0-blue.svg)](LICENSE)
 [![Research status](https://img.shields.io/badge/status-exploratory_development-64748b.svg)](docs/RESULTS.md)
 
@@ -62,8 +62,8 @@ Read [the full report](docs/RESULTS.md) for matched pre-RL controls, uncertainty
 The small demo exercises the actual acquisition environment using synthetic scores. It needs no model, medical images, GPU, or network access after installing NumPy.
 
 ```bash
-git clone https://github.com/jxia622/SonoMed-ActiveReader.git
-cd SonoMed-ActiveReader
+git clone https://github.com/jxia622/ultrasound-video-agent.git
+cd ultrasound-video-agent
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install 'numpy>=1.26,<3'

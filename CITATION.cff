@@ -1,12 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this research code, cite this repository and the original datasets and model."
-title: "SonoMed ActiveReader: History-conditioned ultrasound evidence selection"
+title: "Ultrasound Video Agent: History-conditioned ultrasound evidence selection"
 type: software
 authors:
   - family-names: Xia
     given-names: Jack
 version: 0.1.1
 date-released: 2026-10-11
-url: "https://github.com/jxia622/SonoMed-ActiveReader"
-repository-code: "https://github.com/jxia622/SonoMed-ActiveReader"
+url: "https://github.com/jxia622/ultrasound-video-agent"
+repository-code: "https://github.com/jxia622/ultrasound-video-agent"
 license: Apache-2.0
